@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorText"
     tools:context=".MainActivity">
 
     <TextView
@@ -25,14 +26,16 @@
 
     <EditText
         android:id="@+id/user"
+        style="@style/Widget.AppCompat.EditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="67dp"
         android:layout_marginEnd="21dp"
+        android:background="@drawable/edit_text_background"
         android:ems="10"
         android:hint="Email ou Login"
-        android:inputType="textPersonName"
+        android:inputType="text|textEmailAddress|textPersonName"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -44,8 +47,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
+        android:layout_marginTop="46dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="34dp"
+        android:background="@drawable/edit_text_background"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
@@ -53,14 +58,15 @@
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user" />
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="141dp"
-        android:layout_marginEnd="141dp"
+        android:layout_width="358dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="27dp"
         android:layout_marginBottom="144dp"
         android:background="@drawable/button_rounded"
         android:fontFamily="@font/bangers"
@@ -69,7 +75,6 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -102,6 +107,7 @@
         android:text="Login"
         android:textAlignment="center"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBottomLog" />
 
@@ -115,6 +121,7 @@
         android:text="Cadastrar"
         android:textAlignment="center"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageBottomReg" />
 
