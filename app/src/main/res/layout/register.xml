@@ -28,7 +28,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="27dp"
         android:background="@drawable/edit_text_background"
         android:ems="10"
@@ -46,6 +46,23 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="27dp"
+        android:background="@drawable/edit_text_background"
+        android:ems="10"
+        android:hint="Confirmar Senha"
+        android:inputType="textPassword"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password3" />
+
+    <EditText
+        android:id="@+id/password3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="27dp"
         android:layout_marginBottom="41dp"
         android:background="@drawable/edit_text_background"
         android:ems="10"
@@ -54,19 +71,21 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user2" />
+        app:layout_constraintTop_toBottomOf="@+id/user2"
+        app:layout_constraintVertical_bias="0.123" />
 
     <Button
         android:id="@+id/btnLogin4"
         android:layout_width="358dp"
         android:layout_height="45dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="27dp"
         android:background="@drawable/button_rounded"
         android:fontFamily="@font/bangers"
-        android:text="ENTRAR"
+        android:text="CRIAR"
         android:textColor="@color/colorText"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,15 +122,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin4" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="27dp"
-        android:text="Esqueceu a senha?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2" />
 </android.support.constraint.ConstraintLayout>
