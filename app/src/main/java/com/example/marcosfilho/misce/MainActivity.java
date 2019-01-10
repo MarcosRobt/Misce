@@ -25,20 +25,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void register(View view){
 
-        Animation fadeOut = new AlphaAnimation(1, 0);
-        fadeOut.setInterpolator(new AccelerateInterpolator()); //and this
-        fadeOut.setStartOffset(1000);
-        fadeOut.setDuration(1000);
-
         EditText user = this.findViewById(R.id.user);
         EditText password = this.findViewById(R.id.password);
         Button btnLogin = this.findViewById(R.id.btnLogin);
         ImageView imageBottomReg = this.findViewById(R.id.imageBottomReg);
         ImageView imageBottomLog = this.findViewById(R.id.imageBottomLog);
 
-        user.setAnimation(fadeOut);
-        password.setAnimation(fadeOut);
-        btnLogin.setAnimation(fadeOut);
+        user.setVisibility(View.GONE);
+        password.setVisibility(View.GONE);
+        btnLogin.setVisibility(View.GONE);
         imageBottomReg.setBackgroundResource(R.drawable.bar_rounded_focus);
         imageBottomLog.setBackgroundResource(R.drawable.bar_rounded_unfocus);
 
@@ -46,10 +41,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view){
-
-        Animation fadeIn = new AlphaAnimation(0, 1);
-        fadeIn.setInterpolator(new DecelerateInterpolator()); //add this
-        fadeIn.setDuration(1000);
 
         EditText user = this.findViewById(R.id.user);
         EditText password = this.findViewById(R.id.password);
