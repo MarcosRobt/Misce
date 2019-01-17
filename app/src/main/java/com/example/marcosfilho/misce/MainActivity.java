@@ -1,5 +1,7 @@
 package com.example.marcosfilho.misce;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         View layoutRegister = this.findViewById(R.id.layout_register);
         ImageView imageBottomReg = this.findViewById(R.id.imageBottomReg);
         ImageView imageBottomLog = this.findViewById(R.id.imageBottomLog);
-        TextView logo = this.findViewById(R.id.textView);
+        final TextView logo = this.findViewById(R.id.textView);
 
 
         layoutRegister.setVisibility(View.VISIBLE);
@@ -43,8 +45,23 @@ public class MainActivity extends AppCompatActivity {
 
         ObjectAnimator animOutLogo = ObjectAnimator.ofFloat(logo, "Alpha", 1, 0);
         animOutLogo.setDuration(1000);
+
+        animOutLogo.addListener(new AnimatorListenerAdapter() {
+
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            public void onAnimationEnd(Animation animation) {
+                logo.setVisibility(View.GONE);
+            }
+
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
         animOutLogo.start();
-        logo.setVisibility(View.GONE);
+
 
         ObjectAnimator animIn = ObjectAnimator.ofFloat(layoutRegister, "Alpha", 0, 1 );
         animIn.setDuration(1000);
@@ -54,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         imageBottomLog.setBackgroundResource(R.drawable.bar_rounded_unfocus);
 
 
+    }
+
+    public void onAnimationEnd (Animator animation){
+
+        TextView logo = this.findViewById(R.id.textView);
+        logo.setVisibility(View.GONE);
     }
 
     public void login(View view){

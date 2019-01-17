@@ -32,7 +32,7 @@
         android:layout_marginEnd="27dp"
         android:background="@drawable/edit_text_background"
         android:ems="10"
-        android:hint="Email ou Login"
+        android:hint="Email"
         android:inputType="text|textEmailAddress|textPersonName"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
